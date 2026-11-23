@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game UlerKu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>🐍 ULERKU</h1>
+
+    <div class="game-container">
+        <div class="score-board">
+            <div class="score-box">Score: <span id="score">0</span></div>
+            <div class="score-box">High Score: <span id="high-score">0</span></div>
+        </div>
+
+        <canvas id="snakeCanvas" width="400" height="400"></canvas>
+
+        <button id="pause-btn" class="btn" style="margin-top:0.5rem; display:none;">⏸ Pause</button>
+
+        <div id="start-screen" class="overlay">
+            <h2>Selamat Datang</h2>
+            <p>Tekan tombol mulai atau tekan ENTER untuk bermain</p>
+            <button id="start-btn" class="btn">Mulai Bermain</button>
+        </div>
+
+        <div id="game-over-screen" class="overlay hidden">
+            <h2>GAME OVER</h2>
+            <p>Skor Akhir: <span id="final-score">0</span></p>
+            <button id="restart-btn" class="btn">Coba Lagi</button>
+        </div>
+    </div>
+
+    <div class="controls" aria-label="Kontrol sentuh">
+        <div class="control-btn control-up" data-dir="up">▲</div>
+        <div class="control-btn control-left" data-dir="left">◀</div>
+        <div class="control-btn control-down" data-dir="down">▼</div>
+        <div class="control-btn control-right" data-dir="right">▶</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
